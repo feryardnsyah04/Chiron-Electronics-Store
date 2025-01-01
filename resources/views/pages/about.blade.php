@@ -3,18 +3,24 @@
 @section('title', 'About Us - Chiron Corporation')
 
 @section('content')
+<div class="about-us">
     <div class="container">
-        <h1 class="text-center" style="margin-top: 50px;">About</h1>
-        <div class="row" style="margin-top: 50px;">
+        <div class="row">
             <div class="col-md-6 py-3 py-md-0">
-                <div class="card">
-                    <img src="{{ asset('images/logo1.png') }}" alt="">
+                <h2>About Us</h2>
+                <h3>Discover Our Product</h3>
+                <p>Product</p>
+                <div class="social-links">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
                 </div>
+                <a href="" class="btn btn-primary mt-3">Learn More</a>
             </div>
             <div class="col-md-6 py-3 py-md-0">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
-                <div id="btn4"><button>Read More...</button></div>
+                <img src="{{ asset('images/image22.jpg') }}" alt="About Us" class="img-fluid">
             </div>
         </div>
     </div>
+</div>
 @endsection
