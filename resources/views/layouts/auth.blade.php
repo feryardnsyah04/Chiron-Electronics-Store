@@ -13,14 +13,15 @@
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <title>@yield('title')</title>
     {{-- CSS --}}
-    <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/auth.css') }}">
 </head>
 <body>
-
+    
     <div class="container-fluid">
         @yield('content')
     </div>
-
+    
+    {{-- JS --}}
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

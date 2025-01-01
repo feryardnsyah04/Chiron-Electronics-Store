@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer container-fluid">
     <h1 class="text-center">Chiron</h1>
     <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, ab?</p>
     <div class="icons text-center">
