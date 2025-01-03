@@ -11,7 +11,6 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +26,7 @@ use App\Http\Controllers\Auth\ResetPasswordController;
 Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/about', [PagesController::class, 'about'])->name('about');
 Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
+Route::get('/laravel', [PagesController::class, 'laravel'])->name('welcome');
 
 // Login Routes
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -48,17 +48,14 @@ Auth::routes();
 // Routes for Admin
 Route::middleware(['auth', 'admin'])->group(function () {
     // Admin-only pages
-    Route::middleware(['auth'])->get('/home', function () {
+    Route::get('/home', function () {
         return view('pages.home');
     })->name('home');
-    Route::get('/stock', [StockController::class, 'index'])->name('stock.index');
-    Route::get('/stock/create', [StockController::class, 'create'])->name('stock.create');
-    Route::post('/stock', [StockController::class, 'store'])->name('stock.store');
-    Route::get('/stock/{productCode}/edit', [StockController::class, 'edit'])->name('stock.edit');
-    Route::put('/stock/{productCode}', [StockController::class, 'update'])->name('stock.update');
-    Route::delete('/stock/{productCode}', [StockController::class, 'destroy'])->name('stock.destroy');        
-    Route::get('/sales', [SalesController::class, 'index'])->name('sales.index');
-    Route::get('/warranty', [WarrantyController::class, 'index'])->name('warranty.index');
+    
+    // Resource routes for stock, sales, and warranty
+    Route::resource('stock', StockController::class);
+    Route::resource('sales', SalesController::class);
+    Route::resource('warranty', WarrantyController::class);
 });
 
 // Routes for authenticated users

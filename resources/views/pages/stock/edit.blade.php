@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Edit Stok Barang')
+@section('title', 'Edit Data Barang')
 
 @section('content')
-<div class="container mt-5">
-    <h1 class="text-center">Edit Stok Barang</h1>
+<div class="container mt-5 pb-5">
+    <h1 class="text-center">Edit Data Barang</h1>
 
     <form action="{{ route('stock.update', $product->product_code) }}" method="POST">
         @csrf
@@ -16,6 +16,10 @@
         <div class="mb-3">
             <label for="product_name" class="form-label">Nama Produk</label>
             <input type="text" class="form-control" id="name" name="name" value="{{ $product->name }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="variants" class="form-label">Varian</label>
+            <input type="text" class="form-control" id="variants" name="variants" value="{{ $product->variants }}" required>
         </div>
         <div class="mb-3">
             <label for="category" class="form-label">Kategori</label>

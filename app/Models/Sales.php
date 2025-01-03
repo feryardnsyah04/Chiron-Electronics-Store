@@ -16,10 +16,11 @@ class Sales extends Model
         'email',
         'phone',
         'purchase_location',
+        'order_status',
     ];
 
     public function product()
     {
-        return $this->belongsTo(Products::class);
+        return $this->belongsTo(Products::class, 'product_id');
     }
 }

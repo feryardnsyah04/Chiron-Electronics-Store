@@ -12,9 +12,13 @@ body {
     padding: 0;
 }
 
+h1 {
+    color: #0f3461;
+}
+
 /* Navbar */
 #navbar-color {
-    background-color: #75553f;
+    background-color: #15203c;
     padding: 0.5rem 1rem;
     display: flex;
     justify-content: center;
@@ -24,9 +28,73 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 70px;
+    gap: 4rem;
     list-style: none;
     padding: 0;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    color: #f8f6f6;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #0f3461;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    display: none; /* Default: hidden */
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #15203c;
+    display: block;
+    margin: 5px 0;
+}
+
+#dashboardDropdown .dropdown-item:hover {
+    color: #15203c;
+}
+
+/* Mobile responsiveness for Navbar*/
+@media (max-width: 768px) {
+    #navbar-color {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        display: none; /* Default: hidden */
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-toggler.active + .navbar-nav {
+        display: flex;
+    }
+
+    .nav-link {
+        margin-right: 0;
+        padding: 10px;
+    }
 }
 
 /* Main Content */
@@ -38,25 +106,9 @@ body {
     background-position: 70%;
 }
 
-/* Footer */
-#footer {
-    width: 100%;
-    background-color: black;
-    margin-top: 100px;
-}
-
-#footer h1 {
-    color: white;
-    padding-top: 30px;
-}
-
-#footer p {
-    color: white;
-}
-
 /* shop */
-h1 {
-    color: #005BE4;
+#shop-content h1 {
+    color: #0f3461;
     font-weight: 700;
     margin-bottom: 30px;
 }
@@ -73,12 +125,12 @@ h1 {
 }
 
 .card-img-top {
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
 }
 
-.card-title {
+#shop-content .card-title {
     font-weight: 500;
-    color: #005BE4;
+    color: #0f3461;
 }
 
 .card-text {
@@ -150,6 +202,7 @@ h1 {
     max-width: 100%;
     height: auto;
     margin:0 auto;
+    border-radius: 20px;
 }
 .social-links{
     margin-bottom: 20px;
@@ -178,7 +231,6 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;
-    background-color: #333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0, 3);
     transition: all 0.4s ease;
 }
@@ -211,3 +263,19 @@ h1 {
         margin-bottom: 30px;
     }
 }
+
+/* Footer */
+.footer {
+    background-color: #1a1a2e;
+    color: #f8f6f6;
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+.footer h1, .footer p, .footer .icons, .footer .copyright {
+    color: #f8f6f6;
+}
+
+.footer .icons i {
+    margin: 0 10px;
+}
+

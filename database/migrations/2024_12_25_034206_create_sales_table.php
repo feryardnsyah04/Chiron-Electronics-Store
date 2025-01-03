@@ -15,17 +15,16 @@ return new class extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('product_id');
+            $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
+            $table->integer('quantity');
             $table->string('buyer_name');
             $table->string('email');
             $table->string('phone');
-            $table->string('purchase_location');
-            $table->integer('quantity');
+            $table->enum('purchase_location', ['Online', 'Offline'])->default('Online');
+            $table->enum('order_status', ['Diproses', 'Dikirim', 'Diterima'])->default('Diproses');
             $table->timestamps();
-    
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
-    }    
+    }
 
     /**
      * Reverse the migrations.

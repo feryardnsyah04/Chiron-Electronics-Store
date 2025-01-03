@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('warranties', function (Blueprint $table) {
@@ -20,21 +15,13 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->integer('warranty_duration');
-            $table->enum('order_status', ['Diproses', 'Dalam perjalanan', 'Selesai'])->default('diproses');
+            $table->timestamp('expiration_time')->nullable();
             $table->timestamps();
     
-            $table->foreign('product_id')
-                  ->references('id')
-                  ->on('products')
-                  ->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
     }        
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('warranties');

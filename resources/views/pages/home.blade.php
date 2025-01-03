@@ -7,7 +7,7 @@
     <div class="main-content">
         <br><br><br><br><br><br><br><br><br>
         <div class="content">
-            <h1>Make Your Life<br>To Enjoy</h1>
+            <p style="font-size: 2em">Make Your Life<br>To Enjoy</p>
             <br>
             <div id="btn1">
                 <button>Shop Now</button>
@@ -16,7 +16,7 @@
     </div>
     
     <!-- Card 1 -->
-    <div class="container">
+    <div class="container" id="home-card-1">
         <h3 class="text-center" style="padding-top: 30px;">Products Discount</h3>
         <div class="row" style="margin-top: 50px;">
             <div class="col-md-4 py-3 py-md-0">
@@ -54,7 +54,7 @@
     <!-- Card 1 -->
 
     <!-- Card 2 -->
-    <div class="container">
+    <div class="container pb-5" id="home-card-2">
         <div class="row" style="margin-top: 100px;">
             <div class="col-md-4 py-3 py-md-0">
                 <div class="card" id="tpc">
@@ -69,7 +69,7 @@
                 <div class="card" id="tpc">
                     <img src="{{ asset('images/headset.png') }}" alt="" class="card-img-top">
                     <div class="card-img-overlay">
-                        <h4 class="card-title">HeadPhone</h4>
+                        <h4 class="card-title">Headphones</h4>
                         <div id="btn2"><button>Buy Now</button></div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                 <div class="card" id="tpc">
                     <img src="{{ asset('images/laptop.png') }}" alt="" class="card-img-top">
                     <div class="card-img-overlay">
-                        <h4 class="card-title">Laptop</h4>
+                        <h4 class="card-title">Laptops</h4>
                         <div id="btn2"><button>Buy Now</button></div>
                     </div>
                 </div>

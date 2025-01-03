@@ -3,7 +3,7 @@
 @section('title', 'Shop - Chiron Corporation')
 
 @section('content')
-<div class="container py-5">
+<div class="container py-5" id="shop-content">
     <h1 class="text-center mb-4">Shop</h1>
     <p class="text-center">Explore a variety of products we offer. Shop now and enjoy amazing discounts!</p>
     <div class="row row-cols-1 row-cols-md-3 g-4 py-4">
@@ -11,7 +11,7 @@
             <div class="card">
                 <img src="{{ asset('images/dish1.jpg') }}" class="card-img-top" alt="Product Image">
                 <div class="card-body">
-                    <h5 class="card-title">Iphone 13</h5>
+                    <h5 class="card-title">iPhone 13</h5>
                     <p class="card-text">"Experience innovation and performance with the iPhone 13, featuring a sleek design, powerful A15 Bionic chip, advanced dual-camera system, and all-day battery life for a premium smartphone experience."</p>
                 </div>
                 <div class="mb-5 d-flex justify-content-between align-items-center px-3">

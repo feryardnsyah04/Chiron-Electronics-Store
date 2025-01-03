@@ -18,4 +18,19 @@ class Products extends Model
         'price',
         'stock',
     ];
+    
+    public function increaseStock($quantity)
+    {
+        $this->stock += $quantity;
+        $this->save();
+    }
+
+    public function decreaseStock($quantity)
+    {
+        if ($this->stock < $quantity) {
+            throw new \Exception('Stok produk tidak mencukupi.');
+        }
+        $this->stock -= $quantity;
+        $this->save();
+    }
 }

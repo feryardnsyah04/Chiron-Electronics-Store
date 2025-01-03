@@ -1,13 +1,17 @@
 @extends('layouts.app')
 
-@section('title', 'Tambah Stok Barang')
+@section('title', 'Tambah Data Barang')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-5 pb-5">
     <h1 class="text-center">Tambah Stok Barang</h1>
 
     <form action="{{ route('stock.store') }}" method="POST">
         @csrf
+        <div class="mb-3">
+            <label for="product_code" class="form-label">Kode Produk</label>
+            <input type="text" class="form-control" id="product_code" name="product_code" required>
+        </div>
         <div class="mb-3">
             <label for="name" class="form-label">Nama Produk</label>
             <input type="text" class="form-control" id="name" name="name" required>

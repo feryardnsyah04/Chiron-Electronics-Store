@@ -9,25 +9,25 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/shop') }}">Shop</a>
+                    <a class="nav-link" href="{{ url('/shop') }}">Belanja</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/about') }}">About</a>
+                    <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
+                    <a class="nav-link" href="{{ url('/contact') }}">Kontak</a>
                 </li>
 
                 @auth
                     @if(Auth::user()->is_admin)
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dashboardDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item dropdown" id="dashboardDropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dashboardDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #f8f6f6">
                                 Dashboard
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dashboardDropdown">
-                                <li><a class="dropdown-item" href="{{ route('stock.index') }}">View Stock</a></li>
-                                <li><a class="dropdown-item" href="{{ route('sales.index') }}">Track Sales</a></li>
-                                <li><a class="dropdown-item" href="{{ route('warranty.index') }}">Manage Warranty</a></li>
+                                <li><a class="dropdown-item" href="{{ route('stock.index') }}">Lihat Stok</a></li>
+                                <li><a class="dropdown-item" href="{{ route('sales.index') }}">Lacak Penjualan</a></li>
+                                <li><a class="dropdown-item" href="{{ route('warranty.index') }}">Mengelola Garansi</a></li>
                             </ul>
                         </li>
                     @endif
@@ -40,9 +40,12 @@
                         <button class="btn btn-danger">Logout</button>
                     </form>
                 @else
-                    <a href="{{ route('login') }}" class="btn btn-primary">Login</a>
+                    <form action="{{ route('login') }}" method="GET" class="d-inline">
+                        @csrf
+                        <button class="btn btn-primary">Login</button>
+                    </form>
                 @endauth
-            </ul>
+            </ul>            
         </div>
     </div>
 </nav>

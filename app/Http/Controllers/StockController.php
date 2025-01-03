@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\DB;
 
 class StockController extends Controller
 {
-    public function index(Request $request) // Tambahkan parameter $request
+    public function index(Request $request)
     {
-        $pagination = $request->get('perPage', 10); // Ambil nilai dari parameter 'perPage' (default 10)
-        $products = Products::paginate($pagination); // Gunakan paginate dengan nilai pagination
+        $pagination = $request->get('perPage', 10); 
+        $products = Products::paginate($pagination); 
         
         return view('pages.stock.index', compact('products'));
     }
@@ -24,6 +24,7 @@ class StockController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'product_code' => 'required|string|max:255',
             'name' => 'required|string|max:255',
             'variants' => 'required|string|max:255',
             'category' => 'required|string|max:255',
@@ -32,10 +33,8 @@ class StockController extends Controller
             'stock' => 'required|integer|min:0',
         ]);
 
-        $productCode = $this->generateProductCode($request->name);
-
         Products::create([
-            'product_code' => $productCode,
+            'product_code' => $request->product_code,
             'name' => $request->name,
             'variants' => $request->variants,
             'category' => $request->category,
@@ -87,19 +86,5 @@ class StockController extends Controller
         }
 
         return redirect()->route('stock.index')->with('success', 'Data produk berhasil dihapus!');
-    }
-
-    private function generateProductCode($productName)
-    {
-        $words = explode(' ', strtoupper($productName));
-        $code = '';
-
-        foreach ($words as $word) {
-            $code .= $word[0];
-        }
-
-        $code = preg_replace('/[^A-Z0-9]/', '', $code);
-
-        return $code;
     }
 }
