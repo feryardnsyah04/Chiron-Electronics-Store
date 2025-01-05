@@ -15,7 +15,7 @@
                     <a href=""><i class="bx bxl-twitter"></i></a>
                     <a href=""><i class="bx bxl-instagram"></i></a>
                 </div>
-                <a href="" class="btn btn-primary mt-3">pelajari selengkapnya</a>
+                <a href="{{ url('/about') }}" class="btn btn-primary mt-3">Pelajari Selengkapnya</a>
             </div>
             <div class="col-md-6 py-3 py-md-0">
                 <img src="{{ asset('images/image22.jpg') }}" alt="About Us" class="img-fluid">

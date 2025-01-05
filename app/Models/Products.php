@@ -14,7 +14,7 @@ class Products extends Model
         'name',
         'variants',
         'category',
-        'serial_number',
+        'supplier',
         'price',
         'stock',
     ];

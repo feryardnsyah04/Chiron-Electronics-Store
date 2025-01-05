@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md" id="navbar-color">
+<nav class="navbar navbar-expand-lg" id="navbar-color">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{ asset('images/logo.svg') }}" alt="Logo" width="30" height="30">
@@ -7,7 +7,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/shop') }}">Belanja</a>
                 </li>
@@ -33,7 +33,7 @@
                     @endif
                 @endauth
             </ul>
-            <ul class="navbar-nav ml-auto d-flex" id="btn-auth">
+            <ul class="navbar-nav ms-auto d-flex" id="btn-auth">
                 @auth
                     <form action="{{ route('logout') }}" method="POST" class="d-inline">
                         @csrf

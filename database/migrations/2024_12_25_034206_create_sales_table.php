@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
+            $table->string('serial_number');
             $table->integer('quantity');
             $table->string('buyer_name');
             $table->string('email');

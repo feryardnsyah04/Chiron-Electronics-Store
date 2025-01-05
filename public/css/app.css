@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
 /* Import Font */
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
 
 body {
     font-family: "Poppins", serif;
@@ -21,20 +21,25 @@ h1 {
     background-color: #15203c;
     padding: 0.5rem 1rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.navbar-nav {
-    margin: 0 auto;
+#navbarNav {
     display: flex;
-    justify-content: center;
-    gap: 4rem;
-    list-style: none;
-    padding: 0;
+    justify-content: left;
+    gap: 2rem;
+    flex-grow: 1;
 }
 
-.nav-item {
+#btn-auth {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-nav .nav-item {
     display: inline-block;
+    margin-right: 1rem;
 }
 
 .nav-link {
@@ -69,7 +74,7 @@ h1 {
     color: #15203c;
 }
 
-/* Mobile responsiveness for Navbar*/
+/* Mobile responsiveness for Navbar */
 @media (max-width: 768px) {
     #navbar-color {
         flex-direction: column;
@@ -79,7 +84,7 @@ h1 {
     .navbar-nav {
         flex-direction: column;
         gap: 15px;
-        text-align: center;
+        text-align: left;
         display: none; /* Default: hidden */
     }
 
@@ -104,6 +109,11 @@ h1 {
     background-image: url('/images/background.png');
     background-size: cover;
     background-position: 70%;
+}
+
+/* Datatables */
+.table-container {
+    padding-bottom: 1rem;
 }
 
 /* shop */
@@ -138,7 +148,7 @@ h1 {
     color: #555;
 }
 
-.btn-primary {
+#shop-content .btn-primary {
     border-radius: 30px;
     background-color: #005BE4;
     border: none;
@@ -238,7 +248,7 @@ h1 {
     transform: translateY(-3px);
 }
 
-.btn{
+.about-us .btn{
     text-decoration: none;
     color:#fff;
     display: inline-block;
@@ -254,7 +264,7 @@ h1 {
 .btn:hover{
     transform: translateY(-3px);
 }
-@media  screen and(max-width: 768px) {
+@media screen and(max-width: 768px) {
     .row{
         flex-direction: column;
     }
@@ -274,7 +284,7 @@ h1 {
         font-size: 14px;
         margin-right: 5px;
     }
-    .btn{
+    .about-us .btn{
         font-size: 14px;
         padding: 8px 16px;
         margin-bottom: 30px;

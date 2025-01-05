@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Tambah Garansi')
+@section('title', 'Tambah Data Garansi')
 
 @section('content')
 <div class="container mt-5 pb-5">
@@ -15,6 +15,18 @@
                     <option value="{{ $product->id }}">{{ $product->name }}</option>
                 @endforeach
             </select>
+        </div>
+        <div class="mb-3">
+            <label for="product_id" class="form-label">Varian</label>
+            <select class="form-select" id="product_id" name="product_id" required>
+                @foreach($products as $product)
+                    <option value="{{ $product->id }}">{{ $product->variants }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="serial_number" class="form-label">Nomor Seri</label>
+            <input type="text" class="form-control" id="serial_number" name="serial_number" required>
         </div>
         <div class="mb-3">
             <label for="buyer_name" class="form-label">Nama Pembeli</label>

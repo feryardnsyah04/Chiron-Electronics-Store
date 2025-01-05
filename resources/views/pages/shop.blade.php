@@ -53,8 +53,8 @@
             <div class="card">
                 <img src="{{ asset('images/laptop.png') }}" class="card-img-top" alt="Product Image">
                 <div class="card-body">
-                    <h5 class="card-title">HP Pavillion g4</h5>
-                    <p class="card-text">"The HP Pavilion g4 combines reliable performance with sleek design, making it perfect for everyday computing tasks and entertainment."</p>
+                    <h5 class="card-title">HP Pavillion G4</h5>
+                    <p class="card-text">"The HP Pavilion G4 combines reliable performance with sleek design, making it perfect for everyday computing tasks and entertainment."</p>
                 </div>
                 <div class="mb-5 d-flex justify-content-between align-items-center px-3">
                     <span class="price">Rp2.980.000</span>
@@ -107,7 +107,7 @@
 
         <div class="col">
             <div class="card">
-                <img src="{{ asset('images/laptop.png') }}" class="card-img-top" alt="Product Image">
+                <img src="{{ asset('images/3.png') }}" class="card-img-top" alt="Product Image">
                 <div class="card-body">
                     <h5 class="card-title">MONITOR SAMSUNG 24 inch FHD IPS 75HZ LS24R350FHEXXD Bezel-less Design - 75Hz</h5>
                     <p class="card-text">"Sleek and bezel-less, the 24-inch Samsung FHD IPS monitor delivers vibrant visuals and smooth 75Hz performance for work and entertainment."</p>
@@ -121,7 +121,7 @@
 
         <div class="col">
             <div class="card">
-                <img src="{{ asset('images/laptop.png') }}" class="card-img-top" alt="Product Image">
+                <img src="{{ asset('images/1.png') }}" class="card-img-top" alt="Product Image">
                 <div class="card-body">
                     <h5 class="card-title">Apple Vision Pro Headset VR Virtual Reality Spatial Computing - 1TB</h5>
                     <p class="card-text">"Experience the future of spatial computing with the Apple Vision Pro Headset, featuring immersive virtual reality technology and a massive 1TB storage for seamless performance."</p>

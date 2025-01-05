@@ -11,8 +11,17 @@ class WarrantyController extends Controller
 {
     public function index(Request $request)
     {
+        $search = $request->get('search', '');
         $pagination = $request->get('perPage', 10);
-        $warranties = Warranty::with('product')->paginate($pagination);
+
+        $warranties = Warranty::query()
+            ->when($search, function ($query, $search) {
+                return $query->where('buyer_name', 'like', "%{$search}%")
+                             ->orWhere('email', 'like', "%{$search}%")
+                             ->orWhere('phone', 'like', "%{$search}%");
+            })
+            ->paginate($pagination)
+            ->appends(['search' => $search, 'perPage' => $pagination]);
 
         return view('pages.warranty.index', compact('warranties'));
     }
@@ -27,6 +36,7 @@ class WarrantyController extends Controller
     {
         $request->validate([
             'product_id' => 'required|exists:products,id',
+            'serial_number' => 'required|string|max:255',
             'buyer_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:20',
@@ -39,6 +49,7 @@ class WarrantyController extends Controller
         
         Warranty::create([
             'product_id' => $request->product_id,
+            'serial_number' => $request->serial_number,
             'buyer_name' => $request->buyer_name,
             'email' => $request->email,
             'phone' => $request->phone,
@@ -62,6 +73,7 @@ class WarrantyController extends Controller
     {
         $request->validate([
             'product_id' => 'required|exists:products,id',
+            'serial_number' => 'required|string|max:255',
             'buyer_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:20',
@@ -75,6 +87,7 @@ class WarrantyController extends Controller
 
         $warranty->update([
             'product_id' => $request->product_id,
+            'serial_number' => $request->serial_number,
             'buyer_name' => $request->buyer_name,
             'email' => $request->email,
             'phone' => $request->phone,
