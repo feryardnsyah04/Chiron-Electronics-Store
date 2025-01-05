@@ -33,7 +33,7 @@
                     @endif
                 @endauth
             </ul>
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ml-auto d-flex" id="btn-auth">
                 @auth
                     <form action="{{ route('logout') }}" method="POST" class="d-inline">
                         @csrf
