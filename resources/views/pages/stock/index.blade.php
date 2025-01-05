@@ -5,7 +5,7 @@
 @section('content')
 <div class="d-flex flex-column min-vh-100">
     <div class="container table-container flex-grow-1 mt-5 pb-5">
-        <h1 class="text-center">Stok Barang</h1>
+        <h1 class="text-center"><b>Stok Barang</b></h1>
         <div class="d-flex justify-content-between mb-3">
             {{-- Tombol Tambah Produk --}}
             <div class="flex-grow-1">

@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container mt-5 pb-5">
-    <h1 class="text-center">Tambah Stok Barang</h1>
+    <h1 class="text-center"><b>Tambah Stok Barang</b></h1>
 
     <form action="{{ route('stock.store') }}" method="POST">
         @csrf

@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container mt-5 pb-5">
-    <h1 class="text-center">Edit Data Barang</h1>
+    <h1 class="text-center"><b>Edit Data Barang</b></h1>
 
     <form action="{{ route('stock.update', $product->product_code) }}" method="POST">
         @csrf
