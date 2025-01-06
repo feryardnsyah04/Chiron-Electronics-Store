@@ -10,9 +10,18 @@ class StockController extends Controller
 {
     public function index(Request $request)
     {
-        $pagination = $request->get('perPage', 10); 
-        $products = Products::paginate($pagination); 
-        
+        $search = $request->get('search', '');
+        $pagination = $request->get('perPage', 10);
+    
+        $products = Products::query()
+            ->when($search, function ($query, $search) {
+                return $query->where('name', 'like', "%{$search}%")
+                             ->orWhere('product_code', 'like', "%{$search}%")
+                             ->orWhere('supplier', 'like', "%{$search}%");
+            })
+            ->paginate($pagination)
+            ->appends(['search' => $search, 'perPage' => $pagination]);
+    
         return view('pages.stock.index', compact('products'));
     }
 
@@ -28,7 +37,7 @@ class StockController extends Controller
             'name' => 'required|string|max:255',
             'variants' => 'required|string|max:255',
             'category' => 'required|string|max:255',
-            'serial_number' => 'required|string|max:255|unique:products',
+            'supplier' => 'required|string|max:255|',
             'price' => 'required|integer|min:0',
             'stock' => 'required|integer|min:0',
         ]);
@@ -38,7 +47,7 @@ class StockController extends Controller
             'name' => $request->name,
             'variants' => $request->variants,
             'category' => $request->category,
-            'serial_number' => $request->serial_number,
+            'supplier' => $request->supplier,
             'price' => $request->price,
             'stock' => $request->stock,
         ]);
@@ -58,7 +67,7 @@ class StockController extends Controller
             'name' => 'required|string|max:255',
             'variants' => 'required|string|max:255',
             'category' => 'required|string|max:255',
-            'serial_number' => 'required|string|max:255|unique:products,serial_number,' . $productCode . ',product_code',
+            'supplier' => 'required|string|max:255|',
             'price' => 'required|integer|min:0',
             'stock' => 'required|integer|min:0',
         ]);
@@ -68,7 +77,7 @@ class StockController extends Controller
             'name' => $request->name,
             'variants' => $request->variants,
             'category' => $request->category,
-            'serial_number' => $request->serial_number,
+            'supplier' => $request->supplier,
             'price' => $request->price,
             'stock' => $request->stock,
         ]);

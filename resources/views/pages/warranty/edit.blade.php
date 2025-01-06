@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container mt-5 pb-5">
-    <h1 class="text-center">Edit Data Garansi</h1>
+    <h1 class="text-center"><b>Edit Data Garansi</b></h1>
 
     <form action="{{ route('warranty.update', $warranty->id) }}" method="POST">
         @csrf
@@ -14,10 +14,14 @@
             <select class="form-select" id="product_id" name="product_id" required>
                 @foreach($products as $product)
                     <option value="{{ $product->id }}" {{ $warranty->product_id == $product->id ? 'selected' : '' }}>
-                        {{ $product->name }}
+                        {{ $product->product_code }}
                     </option>
                 @endforeach
             </select>
+        </div>
+        <div class="mb-3">
+            <label for="serial_number" class="form-label">Nomor Seri</label>
+            <input type="text" class="form-control" id="serial_number" name="serial_number" value="{{ $warranty->serial_number }}" required>
         </div>
         <div class="mb-3">
             <label for="buyer_name" class="form-label">Nama Pembeli</label>

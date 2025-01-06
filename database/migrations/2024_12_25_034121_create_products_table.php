@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('variants');
             $table->string('category');
-            $table->string('serial_number')->unique();
+            $table->string('supplier');
             $table->integer('price')->default(0);
             $table->integer('stock')->default(0);
             $table->timestamps();

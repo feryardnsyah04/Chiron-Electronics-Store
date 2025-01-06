@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container mt-5 pb-5">
-    <h1 class="text-center">Tambah Data Penjualan</h1>
+    <h1 class="text-center"><b>Tambah Data Penjualan</b></h1>
 
     <form action="{{ route('sales.store') }}" method="POST">
         @csrf
@@ -12,9 +12,13 @@
             <label for="product_id" class="form-label">Produk</label>
             <select class="form-select" id="product_id" name="product_id" required>
                 @foreach($products as $product)
-                    <option value="{{ $product->id }}">{{ $product->name }}</option>
+                    <option value="{{ $product->id }}">{{ $product->product_code }}</option>
                 @endforeach
             </select>
+        </div>
+        <div class="mb-3">
+            <label for="serial_number" class="form-label">Nomor Seri</label>
+            <input type="text" class="form-control" id="serial_number" name="serial_number" required>
         </div>
         <div class="mb-3">
             <label for="quantity" class="form-label">Jumlah Barang</label>

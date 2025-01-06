@@ -10,8 +10,18 @@ class SalesController extends Controller
 {
     public function index(Request $request)
     {
+        $search = $request->get('search', '');
         $pagination = $request->get('perPage', 10);
-        $sales = Sales::with('product')->paginate($pagination);
+
+        $sales = Sales::query()
+            ->when($search, function ($query, $search) {
+                return $query->where('buyer_name', 'like', "%{$search}%")
+                             ->orWhere('email', 'like', "%{$search}%")
+                             ->orWhere('phone', 'like', "%{$search}%")
+                             ->orWhere('serial_number', 'like', "%{$search}%");
+            })
+            ->paginate($pagination)
+            ->appends(['search' => $search, 'perPage' => $pagination]);
 
         return view('pages.sales.index', compact('sales'));
     }
@@ -26,6 +36,7 @@ class SalesController extends Controller
     {
         $request->validate([
             'product_id' => 'required|exists:products,id',
+            'serial_number' => 'required|string|max:255',
             'quantity' => 'required|integer|min:1',
             'buyer_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
@@ -58,6 +69,7 @@ class SalesController extends Controller
     {
         $request->validate([
             'product_id' => 'required|exists:products,id',
+            'serial_number' => 'required|string|max:255',
             'quantity' => 'required|integer|min:1',
             'buyer_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',

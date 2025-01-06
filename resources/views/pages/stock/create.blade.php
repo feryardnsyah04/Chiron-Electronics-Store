@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container mt-5 pb-5">
-    <h1 class="text-center">Tambah Stok Barang</h1>
+    <h1 class="text-center"><b>Tambah Stok Barang</b></h1>
 
     <form action="{{ route('stock.store') }}" method="POST">
         @csrf
@@ -25,8 +25,8 @@
             <input type="text" class="form-control" id="category" name="category" required>
         </div>
         <div class="mb-3">
-            <label for="serial_number" class="form-label">Nomor Seri</label>
-            <input type="text" class="form-control" id="serial_number" name="serial_number" required>
+            <label for="supplier" class="form-label">Supplier</label>
+            <input type="text" class="form-control" id="supplier" name="supplier" required>
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Harga</label>
