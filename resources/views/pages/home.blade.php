@@ -10,8 +10,11 @@
             <p style="font-size: 2em">Make Your Life<br>To Enjoy</p>
             <br>
             <div id="btn1">
-                <button>Shop Now</button>
+                <a href="{{ url('/shop') }}">
+                    <button>Belanja Sekarang!</button>
+                </a>
             </div>
+            
         </div>
     </div>
     
@@ -24,8 +27,13 @@
                     <img src="{{ asset('images/iklan1.png') }}" alt="" class="card-img-top" height="200px">
                     <div class="card-body">
                         <h5 class="card-title text-center">CUSTOM MENUS</h5>
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                        <div id="btn2" class="text-center"><button>View More</button></div>
+                        <p class="text-center">Temukan penawaran terbaik untuk Anda hari ini...</p>
+                        <div id="btn2" class="text-center">
+                            <a href="{{ url('/shop') }}">
+                                <button>Lihat Selengkapnya</button>
+                            </a>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -34,8 +42,12 @@
                     <img src="{{ asset('images/iklan2.png') }}" alt="" class="card-img-top" height="200px">
                     <div class="card-body">
                         <h5 class="card-title text-center">SMARTEST WAY</h5>
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                        <div id="btn2" class="text-center"><button>View More</button></div>
+                        <p class="text-center">Belanja mudah dan cepat dengan diskon eksklusif...</p>
+                        <div id="btn2" class="text-center">
+                            <a href="{{ url('/shop') }}">
+                                <button>Lihat Selengkapnya</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,8 +56,12 @@
                     <img src="{{ asset('images/iklan3.png') }}" alt="" class="card-img-top" height="200px">
                     <div class="card-body">
                         <h5 class="card-title text-center">USER FRIENDLY</h5>
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                        <div id="btn2" class="text-center"><button>View More</button></div>
+                        <p class="text-center">Dapatkan produk pilihan dengan harga spesial...</p>
+                        <div id="btn2" class="text-center">
+                            <a href="{{ url('/shop') }}">
+                                <button>Lihat Selengkapnya</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -61,7 +77,11 @@
                     <img src="{{ asset('images/airbuds.png') }}" alt="" class="card-img-top">
                     <div class="card-img-overlay">
                         <h4 class="card-title">Airbuds</h4>
-                        <div id="btn2"><button>Buy Now</button></div>
+                        <div id="btn1">
+                            <a href="{{ url('/shop') }}">
+                                <button>Shop Now</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,7 +90,11 @@
                     <img src="{{ asset('images/headset.png') }}" alt="" class="card-img-top">
                     <div class="card-img-overlay">
                         <h4 class="card-title">Headphones</h4>
-                        <div id="btn2"><button>Buy Now</button></div>
+                        <div id="btn1">
+                            <a href="{{ url('/shop') }}">
+                                <button>Shop Now</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,11 +103,16 @@
                     <img src="{{ asset('images/laptop.png') }}" alt="" class="card-img-top">
                     <div class="card-img-overlay">
                         <h4 class="card-title">Laptops</h4>
-                        <div id="btn2"><button>Buy Now</button></div>
+                        <div id="btn1">
+                            <a href="{{ url('/shop') }}">
+                                <button>Shop Now</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Card 2 -->
+
 @endsection

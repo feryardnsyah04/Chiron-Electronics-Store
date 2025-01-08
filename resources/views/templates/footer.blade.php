@@ -1,6 +1,6 @@
 <footer class="footer container-fluid">
     <h1 class="text-center">Chiron</h1>
-    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, ab?</p>
+    <p class="text-center">Jika kamu ingin bantuan atau memiliki masukan, silakan hubungi kami?</p>
     <div class="icons text-center">
         <i class="bx bxl-twitter"></i>
         <i class="bx bxl-facebook"></i>
