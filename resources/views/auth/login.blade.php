@@ -17,19 +17,32 @@
                     </div>
                     <div class="form-group">
                         <div class="custom-control custom-checkbox small">
-                            <input type="checkbox" id="customCheckbox" class="custom-control-input">
-                            <label for="customCheckbox" class="custom-control-label">Remember Me</label><br>
+                            <label for="showPassword" class="custom-control-label">
+                                <input type="checkbox" id="showPassword" onclick="togglePassword()"> Show Password
+                            </label><br>
                             <a href="{{ route('password.request') }}" class="float-right">Forgot Password</a>
                         </div>
                     </div>
                     <button class="btn btn-primary rounded-pill btn-block">Login</button>
                 </form>
-
-                <p class="small text-center my-4"><a href="{{ route('register') }}">Register Here</a></p>
+                <div class="text-center mt-3">
+                    <a href="{{ route('register') }}">Register here</a>
+                </div>
                 <hr>
                 <p class="small text-center my-3">Copyright &copy; 2025. Chiron electronic store.</p>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function togglePassword() {
+        var passwordField = document.getElementById("password");
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+    }
+</script>
 @endsection
