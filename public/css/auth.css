@@ -1,13 +1,11 @@
-/* Import Font */
 @import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+/* Import Font */
 
 body {
-    background-image: -moz-linear-gradient(0deg, #a25e2e 0%, #a25e2e 100%);
-    background-image: -webkit-linear-gradient(0deg, #0f3461 0%, #0f3461 100%);
     background-image: -ms-linear-gradient(0deg,#0f3461 0%, #0f3461 100%);
     color: #717171;
     font-family: "Poppins", sans-serif;
-    background-color: #f9f9f9;
+    background-color: #0f3461;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,10 +16,12 @@ body {
 a {
     color: #717171;
 }
+
 a:hover {
     text-decoration: none;
     transition: 0,8s;
 }
+
 .container {
     max-width: 500px;
     background-color: #ffffff;
@@ -113,9 +113,4 @@ button:hover {
     transition: all 0.3s ease;
     
 }
-
-
-
-
-
 

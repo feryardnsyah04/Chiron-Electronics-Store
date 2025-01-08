@@ -11,7 +11,7 @@
         @method('PUT')
         <div class="mb-3">
             <label for="product_code" class="form-label">Kode Produk</label>
-            <input type="text" class="form-control" id="product_code" name="product_code" value="{{ $product->product_code }}" readonly>
+            <input type="text" class="form-control" id="product_code" name="product_code" value="{{ $product->product_code }}" disabled>
         </div>
         <div class="mb-3">
             <label for="product_name" class="form-label">Nama Produk</label>

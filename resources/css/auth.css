@@ -2,13 +2,24 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
 
 body {
+    background-image: -ms-linear-gradient(0deg,#0f3461 0%, #0f3461 100%);
+    color: #717171;
     font-family: "Poppins", sans-serif;
-    background-color: #f9f9f9;
+    background-color: #0f3461;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+}
+
+a {
+    color: #717171;
+}
+
+a:hover {
+    text-decoration: none;
+    transition: 0,8s;
 }
 
 .container {
@@ -18,11 +29,18 @@ body {
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-top: 50px;
 }
 
 h1 {
     font-size: 24px;
     margin-bottom: 10px;
+}
+
+h4.text-center {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 input[type="text"],
@@ -68,3 +86,30 @@ button:hover {
     background: #ccc;
 }
 
+.card img{
+    max-width: 120px;
+}
+
+.custom-checkbox{
+    line-height: 1.5rem;
+}
+
+.btn{
+    font-size: 0.8rem;
+    padding: 0.75rem 1rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+}
