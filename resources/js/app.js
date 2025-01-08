@@ -1,15 +1,11 @@
+// Mengatur durasi toast notification
 document.addEventListener('DOMContentLoaded', function () {
-    // Inisialisasi toast
-    var toastEl = document.getElementById('myToast');
-    if (toastEl) {
-        var toast = new bootstrap.Toast(toastEl);
-
-        // Tampilkan toast
+    const toastElement = document.querySelector('.toast');
+    if (toastElement) {
+        const toast = new bootstrap.Toast(toastElement);
         toast.show();
-
-        // Atur waktu tampil toast selama 2 detik
-        setTimeout(function() {
+        setTimeout(() => {
             toast.hide();
-        }, 2000); // 2000 milidetik = 2 detik
+        }, 4000);
     }
 });
