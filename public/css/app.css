@@ -173,6 +173,8 @@ h1 {
     margin-bottom: 30px !important;
 }
 
+
+
 /* about us */
 .about-us{
     padding:80px 0px;
@@ -378,3 +380,18 @@ iframe {
     margin: 0 10px;
 }
 
+/*banner */
+.banner-promotion {
+    width: 100%; /* Lebar penuh */
+    height: auto; /* Tinggi otomatis sesuai proporsi */
+  }
+  
+  .banner-promotion img {
+    width: 100%; /* Gambar memanjang secara horizontal */
+    height: auto; /* Menjaga proporsi gambar */
+  }
+  
+  .banner-promotion img.stretch {
+    height: 200px; /* Atur tinggi sesuai kebutuhan */
+    width: auto; /* Biarkan lebar menyesuaikan */
+  }

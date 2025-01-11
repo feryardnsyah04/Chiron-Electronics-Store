@@ -100,7 +100,7 @@
             </div>
             <div class="col-md-4 py-3 py-md-0">
                 <div class="card" id="tpc">
-                    <img src="{{ asset('images/laptop.png') }}" alt="" class="card-img-top">
+                    <img src="{{ asset('images/laptop.png') }}" alt="" class="card-img-top">   
                     <div class="card-img-overlay">
                         <h4 class="card-title">Laptops</h4>
                         <div id="btn1">
@@ -112,6 +112,11 @@
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <div class="container pb-5" id="banner-promotion">
+        <img src="{{ asset('images/banner2.png') }}" alt="" class="card-img-top banner-image">
     </div>
     <!-- Card 2 -->
 
