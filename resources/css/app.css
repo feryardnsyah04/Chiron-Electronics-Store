@@ -1,5 +1,5 @@
-/* Import Font */
 @import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+/* Import Font */
 
 body {
     font-family: "Poppins", serif;
@@ -290,7 +290,7 @@ h1 {
         margin-bottom: 30px;
     }
 }
-
+/* contact us */
 .contact-us-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -328,7 +328,7 @@ h1 {
 }
 
 .contact-details a {
-    color: #ff4c4c;
+    color: #0f3461;
     text-decoration: none;
 }
 
@@ -341,7 +341,6 @@ iframe {
     height: 300px;
     border: none;
 }
-
 
 .social-icons {
     display: flex;
@@ -377,3 +376,4 @@ iframe {
 .footer .icons i {
     margin: 0 10px;
 }
+

@@ -53,8 +53,8 @@
             <div class="card">
                 <img src="{{ asset('images/laptop.png') }}" class="card-img-top" alt="Product Image">
                 <div class="card-body">
-                    <h5 class="card-title">HP Pavillion G4</h5>
-                    <p class="card-text">"The HP Pavilion G4 combines reliable performance with sleek design, making it perfect for everyday computing tasks and entertainment."</p>
+                    <h5 class="card-title">HP Pavilion 14 dv2000TX</h5>
+                    <p class="card-text">"The HP Pavilion 14 dv2000TX is a sleek laptop featuring an Intel Core i7-1255U processor, 16GB RAM, 512GB SSD, NVIDIA MX550 graphics, and comes with Windows 11 and Office Home & Student pre-installed."</p>
                 </div>
                 <div class="mb-5 d-flex justify-content-between align-items-center px-3">
                     <span class="price">Rp2.980.000</span>
@@ -79,7 +79,7 @@
 
         <div class="col">
             <div class="card">
-                <img src="{{ asset('images/airbuds.png') }}" class="card-img-top" alt="Product Image">
+                <img src="{{ asset('images/6.png') }}" class="card-img-top" alt="Product Image">
                 <div class="card-body">
                     <h5 class="card-title">Logitech G102 Mouse Gaming Wired RGB Lightsync with Macro - Hitam</h5>
                     <p class="card-text">"Enhance your gaming precision with the Logitech G102 Wired Gaming Mouse, featuring customizable RGB Lightsync and programmable macros in a sleek black design."</p>
