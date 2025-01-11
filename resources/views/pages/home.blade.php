@@ -115,4 +115,9 @@
     </div>
     <!-- Card 2 -->
 
+    {{-- Banner --}}
+    <div class="container pb-5" id="banner-promotion">
+        <img src="{{ asset('images/banner2.jpg') }}" alt="" class="card-img-top banner-image">
+    </div>
+
 @endsection

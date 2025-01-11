@@ -111,6 +111,22 @@ h1 {
     background-position: 70%;
 }
 
+/*banner */
+.banner-promotion {
+    width: 100%; /* Lebar penuh */
+    height: auto; /* Tinggi otomatis sesuai proporsi */
+}
+
+.banner-promotion img {
+    width: 100%; /* Gambar memanjang secara horizontal */
+    height: auto; /* Menjaga proporsi gambar */
+}
+
+.banner-promotion img.stretch {
+    height: 200px; /* Atur tinggi sesuai kebutuhan */
+    width: auto; /* Biarkan lebar menyesuaikan */
+}
+
 /* Datatables */
 .table-container {
     padding-bottom: 1rem;
