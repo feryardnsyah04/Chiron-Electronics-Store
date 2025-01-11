@@ -1,5 +1,7 @@
 @extends('layouts.auth')
 
+@section('title', 'Login - Chiron Corporation')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
