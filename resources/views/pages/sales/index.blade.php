@@ -78,7 +78,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Apakah Anda yakin ingin menghapus data penjualan <strong>{{ $sale->product->name }}</strong>?
+                                    Apakah Anda yakin ingin menghapus data penjualan <strong>{{ $sale->buyer_name }}</strong>?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
