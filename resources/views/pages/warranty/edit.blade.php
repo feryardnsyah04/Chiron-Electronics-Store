@@ -48,10 +48,6 @@
                 <option value="36" {{ $warranty->warranty_duration == 36 ? 'selected' : '' }}>3 Tahun</option>
             </select>
         </div>
-        <div class="mb-3">
-            <label for="expiration_time" class="form-label">Tanggal Kedaluwarsa</label>
-            <input type="date" class="form-control" id="expiration_time" name="expiration_time" value="{{ \Carbon\Carbon::parse($warranty->expiration_time)->format('Y-m-d') }}" required>
-        </div>
         <div class="d-flex justify-content-between">
             <button type="submit" class="btn btn-primary">Update</button>
             <a href="{{ route('warranty.index') }}" class="btn btn-secondary">Batal</a>

@@ -8,9 +8,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/shop') }}">Belanja</a>
-                </li>
+                @if (!Auth::user() || !Auth::user()->is_admin)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/shop') }}">Belanja</a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                 </li>

@@ -45,7 +45,7 @@ class WarrantyController extends Controller
         ]);
         
         // Hitung expiration_time berdasarkan warranty_duration dan purchase_time
-        $expirationTime = Carbon::parse($request->purchase_time)->addMonths($request->warranty_duration * 6);
+        $expirationTime = Carbon::parse($request->purchase_time)->addMonths($request->warranty_duration);
         
         Warranty::create([
             'product_id' => $request->product_id,
@@ -77,13 +77,14 @@ class WarrantyController extends Controller
             'buyer_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:20',
+            'purchase_time' => 'required|date',
             'warranty_duration' => 'required|integer|min:1',
         ]);
 
         $warranty = Warranty::findOrFail($id);
 
-        // Hitung expiration_time berdasarkan warranty_duration
-        $expirationTime = Carbon::now()->addMonths($request->warranty_duration * 6);
+        // Hitung expiration_time berdasarkan warranty_duration dan purchase_time
+        $expirationTime = Carbon::parse($request->purchase_time)->addMonths($request->warranty_duration);
 
         $warranty->update([
             'product_id' => $request->product_id,
@@ -91,6 +92,7 @@ class WarrantyController extends Controller
             'buyer_name' => $request->buyer_name,
             'email' => $request->email,
             'phone' => $request->phone,
+            'purchase_time' => $request->purchase_time,
             'warranty_duration' => $request->warranty_duration,
             'expiration_time' => $expirationTime,
         ]);
