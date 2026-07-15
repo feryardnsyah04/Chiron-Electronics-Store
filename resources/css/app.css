@@ -280,7 +280,7 @@ h1 {
 .btn:hover{
     transform: translateY(-3px);
 }
-@media screen and(max-width: 768px) {
+@media screen and (max-width: 768px) {
     .row{
         flex-direction: column;
     }

@@ -12,16 +12,13 @@
     {{-- Favicon --}}
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <title>@yield('title')</title>
-    {{-- CSS --}}
-    <link rel="stylesheet" href="{{ mix('css/auth.css') }}">
+    {{-- Vite Assets --}}
+    @vite(['resources/css/auth.css', 'resources/js/app.js'])
 </head>
 <body>
     
     <div class="container-fluid">
         @yield('content')
     </div>
-    
-    {{-- JS --}}
-    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

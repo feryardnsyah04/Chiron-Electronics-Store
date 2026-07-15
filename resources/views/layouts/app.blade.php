@@ -12,8 +12,8 @@
     {{-- Favicon --}}
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <title>@yield('title')</title>
-    {{-- CSS --}}
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet"> 
+    {{-- Vite Assets --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     @include('templates.navbar')
@@ -23,7 +23,5 @@
     </div>
     
     @include('templates.footer')
-    {{-- JS --}}
-    <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
 </html>
